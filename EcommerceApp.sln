@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcommerceApp", "EcommerceApp\EcommerceApp.csproj", "{A4D67A89-3E04-47BF-B5A1-0C22581822C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcommerceApp", "EcommerceApp\EcommerceApp.csproj", "{A4D67A89-3E04-47BF-B5A1-0C22581822C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.BLL", "Ecommerce.BLL\Ecommerce.BLL.csproj", "{3CAE5C53-517F-4AE8-B30F-79CC5C04BD9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.BLL", "Ecommerce.BLL\Ecommerce.BLL.csproj", "{3CAE5C53-517F-4AE8-B30F-79CC5C04BD9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Repository", "Ecommerce.Repository\Ecommerce.Repository.csproj", "{843CAF12-C4D8-4A92-80EF-5D307CCD7999}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Repository", "Ecommerce.Repository\Ecommerce.Repository.csproj", "{843CAF12-C4D8-4A92-80EF-5D307CCD7999}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Database", "Ecommerce.Database\Ecommerce.Database.csproj", "{C65582AE-3808-4A38-BDEC-4DB25587C502}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Database", "Ecommerce.Database\Ecommerce.Database.csproj", "{C65582AE-3808-4A38-BDEC-4DB25587C502}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Model", "Ecommerce.Model\Ecommerce.Model.csproj", "{BB879421-23CE-47B4-B61A-2109B0C9E847}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Model", "Ecommerce.Model\Ecommerce.Model.csproj", "{BB879421-23CE-47B4-B61A-2109B0C9E847}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Repository.Abstraction", "Ecommerce.Repository.Abstraction\Ecommerce.Repository.Abstraction.csproj", "{609762C0-E555-48BD-8D7D-4906AD5D0657}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.BLL.Abstraction", "Ecommerce.BLL.Abstraction\Ecommerce.BLL.Abstraction.csproj", "{353E8EB7-7DD5-440F-A9E0-7387522956F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{BB879421-23CE-47B4-B61A-2109B0C9E847}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB879421-23CE-47B4-B61A-2109B0C9E847}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB879421-23CE-47B4-B61A-2109B0C9E847}.Release|Any CPU.Build.0 = Release|Any CPU
+		{609762C0-E555-48BD-8D7D-4906AD5D0657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{609762C0-E555-48BD-8D7D-4906AD5D0657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{609762C0-E555-48BD-8D7D-4906AD5D0657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{609762C0-E555-48BD-8D7D-4906AD5D0657}.Release|Any CPU.Build.0 = Release|Any CPU
+		{353E8EB7-7DD5-440F-A9E0-7387522956F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{353E8EB7-7DD5-440F-A9E0-7387522956F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{353E8EB7-7DD5-440F-A9E0-7387522956F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{353E8EB7-7DD5-440F-A9E0-7387522956F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

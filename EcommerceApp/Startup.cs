@@ -2,9 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Ecommerce.BLL;
+using Ecommerce.BLL.Abstraction;
+using Ecommerce.Repository;
+using Ecommerce.Repository.Abstraction;
+using ECommerce.Database;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,6 +30,10 @@ namespace EcommerceApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddTransient<ICategoryManager, CategoryManager>();
+             services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<DbContext, CustomerDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

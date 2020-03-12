@@ -1,4 +1,5 @@
-﻿using ECommerce.Models;
+﻿using Ecommerce.Model;
+using ECommerce.Models;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -7,6 +8,8 @@ namespace ECommerce.Database
     public class CustomerDbContext:DbContext
     {
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
