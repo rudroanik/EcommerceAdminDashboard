@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Ecommerce.BLL;
 using Ecommerce.BLL.Abstraction;
 using Ecommerce.Repository;
@@ -34,6 +35,7 @@ namespace EcommerceApp
             services.AddTransient<ICategoryManager, CategoryManager>();
              services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddTransient<DbContext, CustomerDbContext>();
+            services.AddAutoMapper(typeof(Startup).Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

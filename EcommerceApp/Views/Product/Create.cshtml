@@ -1,0 +1,54 @@
+﻿@model EcommerceApp.Models.ProductViewModel
+
+
+@{
+    Layout = "_SBAdminLayout";
+}
+<div class="card">
+    <div class="card-header">
+        <h1 class="card-title">Product Entry</h1>
+    </div>
+
+    <div class="card-body">
+
+        <form method="post">
+            <div class="form-group col-4">
+                <label>Category</label>
+                <select type="text"  asp-for="CategoryId" asp-items="Model.categories" class="form-control">
+                    <option>Select .......</option>
+                </select>
+            </div>
+            <div class="form-group col-4">
+                <label for="Name">Name</label>
+                <input type="text" asp-for="Name" class="form-control" />
+            </div>
+
+            <div class="form-group col-4">
+                <label for="Phone">Product Description</label>
+                <input type="text" asp-for="description" class="form-control" />
+            </div>
+
+            <div class="form-group col-4">
+                <label for="Address">Quantity</label>
+                <input type="number" asp-for="Quantity" class="form-control" />
+            </div>
+            <div class="form-group col-4">
+                <label for="Address">Unit price</label>
+                <input type="number" asp-for="Price" class="form-control" />
+            </div>
+
+            <div class="form-group col-4">
+                <label for="Address">Product Image</label>
+                <input type="file" class="form-control" />
+            </div>
+
+            <input type="submit" value="Save" class="btn btn-primary">
+
+        </form>
+
+
+
+    </div>
+
+</div>
+

@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Ecommerce.Model;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Ecommerce.Model
+namespace EcommerceApp.Models
 {
-    public class Product
+    public class ProductViewModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -13,11 +16,9 @@ namespace Ecommerce.Model
 
         public string description { get; set; }
         public string? Image { get; set; }
-
         public int CategoryId { get; set; }
-        public Category category { get; set; }
 
 
-
+        public ICollection<SelectListItem> categories { get; set; }
     }
 }
