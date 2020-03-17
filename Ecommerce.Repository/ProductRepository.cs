@@ -5,6 +5,7 @@ using ECommerce.Database;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Ecommerce.Repository
@@ -17,6 +18,12 @@ namespace Ecommerce.Repository
             customerDbContext = (CustomerDbContext)db;
         }
 
+        public  ICollection<Product> GetAll()
+        {
+            return customerDbContext.Products.Include(p => p.Category).ToList();
+
+        }
+        
         public Product GetById(int? id)
         {
             if (id == null)

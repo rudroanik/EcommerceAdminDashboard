@@ -72,6 +72,17 @@ namespace EcommerceApp.Controllers
             }
             return View(productViewModel);
         }
+        [HttpPost]
+        public IActionResult Edit(Product product)
+        {
+            bool isUpdated = _productManager.Update(product);
+
+            if (isUpdated)
+            {
+                return RedirectToAction("List");
+            }
+            return View();
+        }
 
 
     }

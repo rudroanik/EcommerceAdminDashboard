@@ -29,7 +29,7 @@ namespace Ecommerce.Repository.Abstraction.Base
             return _db.SaveChanges() > 0;
         }
 
-        public ICollection<T> GetAll()
+        public virtual ICollection<T> GetAll()
         {
            return Table.ToList();
         }
@@ -46,7 +46,9 @@ namespace Ecommerce.Repository.Abstraction.Base
 
         public bool Update(T entry)
         {
-            throw new NotImplementedException();
+            _db.Entry(entry).State = EntityState.Modified;
+
+            return _db.SaveChanges() > 0;
         }
     }
 }

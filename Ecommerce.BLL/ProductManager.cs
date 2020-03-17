@@ -40,7 +40,7 @@ namespace Ecommerce.BLL
 
         public bool Update(Product entry)
         {
-            throw new NotImplementedException();
+            return _productRepository.Update(entry);
         }
     }
 }
