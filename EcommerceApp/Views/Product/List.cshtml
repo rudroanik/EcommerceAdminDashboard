@@ -1,0 +1,80 @@
+﻿@model ICollection<Ecommerce.Model.Product>
+@{
+    Layout = "_SBAdminLayout";
+}
+
+<h2>Product list</h2>
+
+<div class="content-wrapper">
+
+    <div class="card">
+        <h2>Product List</h2>
+
+        
+
+            <table class="table table-striped table-bordered table-hover table-responsive">
+
+                <thead>
+                    <tr>
+                        <th>
+                            Product Name
+                        </th>
+                        <th>
+                            Description
+
+                        </th>
+                        <th>
+                            Price
+                        </th>
+                        <th>
+                            Quantity
+                        </th>
+
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    @foreach (var product in Model)
+                    {
+                        <tr>
+                            <td>@product.Name</td>
+
+
+                            <td>@product.description</td>
+
+
+                            <td>@product.Price</td>
+
+
+                            <td>@product.Quantity</td>
+
+
+
+                            <td>
+                                <form>
+                                    <button type="submit" class="btn btn-primary" asp-controller="Product" asp-action="Edit" asp-route-id="@product.Id">Edit</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form>
+
+                                    <button type="submit" class="btn btn-danger" asp-controller="Customer" asp-action="Delete" asp-route-id="@product.Id">Delete</button>
+
+                                </form>
+                            </td>
+                        </tr>
+
+                    }
+
+
+
+                </tbody>
+
+
+            </table>
+    </div>
+</div>
+

@@ -34,6 +34,8 @@ namespace EcommerceApp
 
             services.AddTransient<ICategoryManager, CategoryManager>();
              services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<IProductManager, ProductManager>();
+            services.AddTransient<IProductRepository, ProductRepository>();
             services.AddTransient<DbContext, CustomerDbContext>();
             services.AddAutoMapper(typeof(Startup).Assembly);
         }

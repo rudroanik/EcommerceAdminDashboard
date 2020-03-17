@@ -14,6 +14,7 @@ namespace EcommerceApp.AutoMapperProfile
         {
             CreateMap<ProductViewModel, Category>();
             CreateMap< Category, ProductViewModel>();
+            CreateMap<Product, ProductViewModel>();
         }
     }
 }

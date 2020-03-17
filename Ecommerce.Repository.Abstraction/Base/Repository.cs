@@ -36,7 +36,7 @@ namespace Ecommerce.Repository.Abstraction.Base
 
         public T GetFirstOrDefault(Expression<Func<T, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return Table.FirstOrDefault(predicate);
         }
 
         public bool Remove(T entry)

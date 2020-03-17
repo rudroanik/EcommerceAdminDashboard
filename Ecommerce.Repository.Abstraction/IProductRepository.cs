@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Ecommerce.Model;
+using Ecommerce.Repository.Abstraction.Base;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Ecommerce.Repository.Abstraction
 {
-    interface IProductRepository
+   public interface IProductRepository:IRepository<Product>
     {
+        Product GetById(int? id);
     }
 }
